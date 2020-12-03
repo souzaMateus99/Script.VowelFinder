@@ -4,9 +4,9 @@ namespace VowelFinder
 {
     public class Program
     {
-        private static readonly char[] vowels = new char[] { 'a', 'e', 'i', 'o', 'u' };
+        internal static readonly char[] vowels = new char[] { 'a', 'e', 'i', 'o', 'u' };
         
-        static void Main(string[] args)
+        internal static void Main(string[] args)
         {            
             var stream = new MyStream("natalidade");
             var vowel = firstChar(stream);
