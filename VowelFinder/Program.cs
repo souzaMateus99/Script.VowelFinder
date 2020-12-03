@@ -24,6 +24,14 @@ namespace VowelFinder
             Console.ReadKey();
         }
 
+        /// <summary>
+        /// Get the first vowel char in the Stream (<paramref name="input"/>)
+        /// </summary>
+        /// <remarks>
+        /// Get the first vowel that don't repeat after a consonant
+        /// </remarks>
+        /// <param name="input">The Stream element</param>
+        /// <returns>First vowel</returns>
         public static char firstChar(IStream input)
         {
             var charLength = 1;
@@ -50,6 +58,12 @@ namespace VowelFinder
             return getDifferentChar(vowelsFind);;
         }
 
+        /// <summary>
+        /// Verify if the word received (<paramref name="word"/>) is a vowel
+        /// </summary>
+        /// <param name="word">Word (char) to verify</param>
+        /// <param name="vowelIndex"></param>
+        /// <returns>If the word is a vowel</returns>
         public static bool isVowel(char word, int vowelIndex = 0)
         {
             if(vowelIndex < vowels.Length)
@@ -65,11 +79,23 @@ namespace VowelFinder
             return false;
         }
 
+        /// <summary>
+        /// Verifiy if the chars elements is equals
+        /// </summary>
+        /// <param name="charOne"></param>
+        /// <param name="charTwo"></param>
+        /// <returns>If the values received are equals</returns>
         public static bool isEqualsChar(char charOne, char charTwo)
         {
             return char.ToLower(charOne).Equals(char.ToLower(charTwo));
         }
 
+        /// <summary>
+        /// Get the first different char from char array
+        /// </summary>
+        /// <param name="chars">char array</param>
+        /// <param name="currentIndex"></param>
+        /// <returns>The first different char from array or default value</returns>
         public static char getDifferentChar(char[] chars, int currentIndex = 1)
         {            
             if(currentIndex < chars.Length)
